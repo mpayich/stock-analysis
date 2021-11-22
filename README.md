@@ -12,7 +12,8 @@ Before refactoring the code, I inserted the code to create the input box, chart 
 The green stocks analyzed were performing much better in 2017 than 2018 as most of the percent returns were negative in 2018. (see refactored code and images below)
 
 ...
-Sub DQAnalysis()
+
+    Sub DQAnalysis()
 
     Worksheets("DQAnalysis").Activate
     
@@ -70,9 +71,9 @@ Sub DQAnalysis()
     Cells(4, 2).Value = totalVolume
     Cells(4, 3).Value = (endingPrice / startingPrice) - 1
 
-End Sub
+    End Sub
 
-   Sub AllStocksAnalysis()
+     Sub AllStocksAnalysis()
 
     Dim startTime As Single
     Dim endTime  As Single
@@ -90,33 +91,33 @@ End Sub
         Cells(3, 2).Value = "Total Daily Volume"
         Cells(3, 3).Value = "Return"
 
-   '2) Initialize array of all tickers
-   Dim tickers(11) As String
-   tickers(0) = "AY"
-   tickers(1) = "CSIQ"
-   tickers(2) = "DQ"
-   tickers(3) = "ENPH"
-   tickers(4) = "FSLR"
-   tickers(5) = "HASI"
-   tickers(6) = "JKS"
-   tickers(7) = "RUN"
-   tickers(8) = "SEDG"
-   tickers(9) = "SPWR"
-   tickers(10) = "TERP"
-   tickers(11) = "VSLR"
+    '2) Initialize array of all tickers
+     Dim tickers(11) As String
+     tickers(0) = "AY"
+     tickers(1) = "CSIQ"
+     tickers(2) = "DQ"
+     tickers(3) = "ENPH"
+     tickers(4) = "FSLR"
+     tickers(5) = "HASI"
+     tickers(6) = "JKS"
+     tickers(7) = "RUN"
+     tickers(8) = "SEDG"
+     tickers(9) = "SPWR"
+      tickers(10) = "TERP"
+      tickers(11) = "VSLR"
    
-   '3a) Initialize variables for starting price and ending price
-   Dim startingPrice As Single
-   Dim endingPrice As Single
+     '3a) Initialize variables for starting price and ending price
+       Dim startingPrice As Single
+      Dim endingPrice As Single
    
-   '3b) Activate data worksheet
-   Worksheets(yearValue).Activate
+     '3b) Activate data worksheet
+      Worksheets(yearValue).Activate
    
-   '3c) Get the number of rows to loop over
-   RowCount = Cells(Rows.Count, "A").End(xlUp).Row
+     '3c) Get the number of rows to loop over
+      RowCount = Cells(Rows.Count, "A").End(xlUp).Row
 
-   '4) Loop through tickers
-   For i = 0 To 11
+      '4) Loop through tickers
+      For i = 0 To 11
        Ticker = tickers(i)
        totalVolume = 0
        
@@ -155,9 +156,9 @@ End Sub
        Cells(4 + i, 2).Value = totalVolume
        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
 
-   Next i
+      Next i
    
-   'Formatting
+      'Formatting
     Worksheets("AllStocksAnalysis").Activate
     Range("A3:C3").Font.FontStyle = "Bold"
     Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
@@ -191,15 +192,15 @@ End Sub
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
 
-End Sub
+    End Sub
 
-Sub ClearWorksheet()
+    Sub ClearWorksheet()
 
     Cells.Clear
 
-End Sub
+    End Sub
 
-Sub AllStocksAnalysisRefactored()
+    Sub AllStocksAnalysisRefactored()
     Dim startTime As Single
     Dim endTime  As Single
 
@@ -333,7 +334,7 @@ Sub AllStocksAnalysisRefactored()
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
 
-End Sub
+    End Sub
 ...
 
 ![This is an image] (
