@@ -337,7 +337,7 @@ The green stocks analyzed were performing much better in 2017 than 2018 as most 
     End Sub
 ...
 
-![2017.refactored](2017 refactored.jpeg)
+![2017.refactored](2017.refactored.jpeg)
 
 
 
