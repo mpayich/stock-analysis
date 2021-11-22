@@ -337,7 +337,7 @@ The green stocks analyzed were performing much better in 2017 than 2018 as most 
     End Sub
 ...
 
-![This is an image] (
+![This is an image] (https://github.com/mpayich/stock-analysis/blob/main/2017%20refactored.jpeg?raw=true)
 
 
 
