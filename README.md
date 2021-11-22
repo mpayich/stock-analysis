@@ -9,7 +9,7 @@ Now, to do a little more research for his parents, he wants to expand the datase
 
 Before refactoring the code, I inserted the code to create the input box, chart headers, ticker array, and to activate the worksheet. The steps were then listed out in order to set the structure for the refactoring. Below is the code as written in the file. The refractored code proved to be more efficient than the original code as the refractored code ran faster for both 2017 and 2018.
 
-The green stocks analyzed were performing much better in 2017 than 2018 as most of the percent returns were negative in 2018. (see refactored code and images below)
+The green stocks analyzed were performing much better in 2017 than 2018 as most of the percent returns were negative in 2018. The refactored code ran almost 24% faster than the original code for the All Stocks Analysis. (see refactored code and images below)
 
 ...
 
@@ -337,9 +337,9 @@ The green stocks analyzed were performing much better in 2017 than 2018 as most 
     End Sub
 ...
 
-![2017](2017.jpeg)
+![2017](2017.png)
 
-![2018](2018.jpeg)
+![2018](2018.png)
 
 ![2017.refactored](2017.refactored.jpeg)
 
@@ -349,8 +349,4 @@ The green stocks analyzed were performing much better in 2017 than 2018 as most 
 
 
 ## Summary:
-In a summary statement, address the following questions.
-What are the advantages or disadvantages of refactoring code? 
-The goal of refactoring the code is to make the code run more efficiently. Cleaner and more organized code will help the program run faster and will improve the readability for other programmers.  
-These disadvantages may range from having applications that are too large to not having the proper test cases for the existing codes, which may ultimately pose some risk if we try to refactor our code. 
-How do these pros and cons apply to refactoring the original VBA script?
+The goal of refactoring the code is to make the code run more efficiently. Cleaner and more organized code will help the program run faster and will improve the readability for other programmers. Disadvantages of refactoring may include having applications that are too big, or not having the proper test cases for the existing codes. For this analysis, it was beneficial to refactor the code resulting in the program running alomst 24% quicker. This will allow Steve and other programers to not only read the code more efficiently and run the code faster, it will also allow for larger data sets to be analyzed using this code in the future. 
